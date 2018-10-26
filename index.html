@@ -152,6 +152,65 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Git推送到远程分支出错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Git推送到远程分支出错"><a href="#Git推送到远程分支出错" class="headerlink" title="Git推送到远程分支出错"></a>Git推送到远程分支出错</h2><p>执行git push -u origin master</p>
+<p>fatal: <a href="mailto:&#39;git@github.com" target="_blank" rel="noopener">&#39;git@github.com</a>：qilinonline/git_test.git’ does not appear to be a git repository fatal: Could not read from remote repository.</p>
+<p>Please make sure you have the correct access rights and the repository exists.</p>
+<p>原因：使用地址不对，这里采用了ssh地址，但是你没有添加ssh秘钥，所以无法连接远程仓库</p>
+<p>解决办法：</p>
+<p>1.使用https地址</p>
+<p>2.添加ssh秘钥</p>
+<p>1：生成秘钥：ssh-keygen -t rsa -C “你自己的邮箱”</p>
+<p>(这里不要设置密码，直接按回车就可以，以后更新就不需要密码)</p>
+<p>2： id_rsa 这个文件是你的私钥、id_rsa.pub是你的公共秘钥，用记事本打开文件id_rsa.pub,把里面的内容复制到github配置ssh</p>
+<p>3：添加私秘钥到ssh: ssh-add id_rsa（如果添加失败可以先执行命令ssh-agent bash,然后再次添加私秘钥。）</p>
+<p>4: 用ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> 判断是否绑定成功。如果返回successfully 表示成功</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/26/Git推送到远程分支出错/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
