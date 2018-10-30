@@ -551,6 +551,120 @@
 
 
   
+    <article id="post-ES6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/30/ES6/">ES6 编码教程第一节：开发环境搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/30/ES6/" class="archive-article-date">
+  	<time datetime="2018-07-30T01:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现在的Chrome浏览器已经支持ES6了，但是有些低版本的浏览器还是不支持ES6的语法，这需要我们把ES6的语法自动的转变成ES5的语法。Webpack是有自动编译转换能力的，除了Webpack自动编译，我们还可以用Babel来完成。</p>
+<h3 id="初始化项目，打开终端输入"><a href="#初始化项目，打开终端输入" class="headerlink" title="初始化项目，打开终端输入"></a>初始化项目，打开终端输入</h3><p>在es6文件下新建两个文件，dist，和src,在src中新建index.js文件。<br><code>npm init -y</code>      //y表示全部默认同意，不用一个个去按回车键<br>(<code>)
+{
+&quot;name&quot;: &quot;es6&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+},
+&quot;keywords&quot;: [],
+&quot;author&quot;: &quot;&quot;,
+&quot;license&quot;: &quot;ISC&quot;
+}
+(</code>)</p>
+<h2 id="全局安装babel-cli"><a href="#全局安装babel-cli" class="headerlink" title="全局安装babel-cli"></a>全局安装babel-cli</h2><p><code>npm install -g babel-cli</code><br>如果有提示：没有允许，无法进行操作的话，使用以下命令<br><code>sudo npm install -g babel-cli</code><br>电脑会提示让你输入开机密码来获取权限进行安装</p>
+<h2 id="安装转换包babel-preset-es2015-和-babel-cli"><a href="#安装转换包babel-preset-es2015-和-babel-cli" class="headerlink" title="安装转换包babel-preset-es2015 和 babel-cli"></a>安装转换包babel-preset-es2015 和 babel-cli</h2><p><code>npm install --save-dev babel-preset-es2015 babel-cli</code><br>这时，查看package.json文件，多了devDependencies选项<br>（<code>）
+&quot;devDependencies&quot;: {
+&quot;babel-cli&quot;: &quot;^6.24.1&quot;,
+&quot;babel-preset-es2015&quot;: &quot;^6.24.1&quot;
+}
+(</code>)</p>
+<h2 id="在根目录下新建-babelrc文件-输入以下代码"><a href="#在根目录下新建-babelrc文件-输入以下代码" class="headerlink" title="在根目录下新建.babelrc文件,输入以下代码"></a>在根目录下新建.babelrc文件,输入以下代码</h2><p>(<code>)
+{
+&quot;presets&quot;:[
+&quot;es2015&quot;
+],
+&quot;plugins&quot;:[]
+}
+(</code>)</p>
+<h2 id="在终端输入以下命令，就可以成功把ES6语法转换为ES5"><a href="#在终端输入以下命令，就可以成功把ES6语法转换为ES5" class="headerlink" title="在终端输入以下命令，就可以成功把ES6语法转换为ES5"></a>在终端输入以下命令，就可以成功把ES6语法转换为ES5</h2><p><code>babel src/index.js -o dist/index.js</code><br>这样每次操作都太麻烦，我们需要一个指令就可以去掉这些操作，找到package.json，<br>(<code>)
+{
+&quot;name&quot;: &quot;es6&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+&quot;build&quot;: &quot;babel src/index.js -o dist/index.js&quot;
+},
+(</code>)<br>这样我们只需要以下指令，就可以操作了<br><code>npm run bulid</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/30/ES6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+ -->
+
+
+  
   
 
 
@@ -642,6 +756,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">cccc</a>
