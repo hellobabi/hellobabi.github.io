@@ -158,213 +158,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-了解闭包" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      移动WEB前端开发资源整合
-    </h1>
-  
-
-        
-        <a href="/2018/10/30/了解闭包/" class="archive-article-date">
-  	<time datetime="2018-10-30T06:26:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-视窗宽度"><a href="#1-视窗宽度" class="headerlink" title="1.视窗宽度"></a>1.视窗宽度</h2><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;/&gt;</code><br>其中 width=device-width 是设置视窗宽度为设备视窗宽度，还可以固定宽度，例如： width=640 则是640px的宽度（常见于微信）；</p>
-<p>initial-scale=1.0 ：设置缩放比例为1.0；</p>
-<a id="more"></a>
-<p>minimum-scale=1.0 和 maximum-scale=1.0 ：最小缩放比例和最大缩放比例；</p>
-<p>user-scalable=no ：禁止用户自由缩放，user-scalable 默认值为 yes 。</p>
-<p>[ecko_icon alias=”fa-exclamation-triangle”] 提示：刚刚那个是带全部参数的，一般常用的，有 user-scalable=no 就不用使用 minimum-scale=1.0 和 maximum-scale=1.0 来强制禁止缩放了。</p>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-
-<h2 id="2-自动识别格式"><a href="#2-自动识别格式" class="headerlink" title="2.自动识别格式"></a>2.自动识别格式</h2><p><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;/&gt;</code><br>content 里面的参数：telephone=no 是禁止浏览器自动识别手机号码，email=no 是禁止浏览器自动识别Email。</p>
-<h2 id="3-完整模板"><a href="#3-完整模板" class="headerlink" title="3.完整模板"></a>3.完整模板</h2><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,user-scalable=no&quot;/&gt;</code><br><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;/&gt;</code><br><code>&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot;/&gt;</code></p>
-<h2 id="3CSS篇"><a href="#3CSS篇" class="headerlink" title="3CSS篇"></a>3CSS篇</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">font-family: &quot;Helvetica Neue&quot;, Helvetica, STHeiTi, sans-serif; /*使用无衬线字体*/</span><br><span class="line">&#125;</span><br><span class="line">a, img &#123;</span><br><span class="line">-webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/</span><br><span class="line">&#125;</span><br><span class="line">html, body &#123;</span><br><span class="line">-webkit-user-select: none; /*禁止选中文本*/</span><br><span class="line">user-select: none;</span><br><span class="line">&#125;</span><br><span class="line">button,input,optgroup,select,textarea &#123;</span><br><span class="line">-webkit-appearance:none; /*去掉webkit默认的表单样式*/</span><br><span class="line">&#125;</span><br><span class="line">a,button,input,optgroup,select,textarea &#123;</span><br><span class="line">-webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/</span><br><span class="line">&#125;</span><br><span class="line">input::-webkit-input-placeholder &#123;</span><br><span class="line">color:#ccc; /*修改webkit中input的planceholder样式*/</span><br><span class="line">&#125;</span><br><span class="line">input:focus::-webkit-input-placeholder &#123;</span><br><span class="line">color:#f00; /*修改webkit中focus状态下input的planceholder样式*/</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">-webkit-text-size-adjust: 100%!important; /*禁止IOS调整字体大小*/</span><br><span class="line">&#125;</span><br><span class="line">input::-webkit-input-speech-button &#123;</span><br><span class="line">display: none; /*隐藏Android的语音输入按钮*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Flex基础篇"><a href="#Flex基础篇" class="headerlink" title="Flex基础篇"></a>Flex基础篇</h2><p>这里假设flex容器为 .box ，子元素为 .item 。</p>
-<p>1.定义容器为flex布局<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">display: -webkit-flex; /*webkit*/</span><br><span class="line">display: flex;</span><br><span class="line">&#125;</span><br><span class="line">/*行内flex*/</span><br><span class="line">.box&#123;</span><br><span class="line">display: -webkit-inline-flex; /*webkit*/</span><br><span class="line">display:inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2.容器样式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">flex-direction: row | row-reverse | column | column-reverse;</span><br><span class="line">/*主轴方向：左到右（默认） | 右到左 | 上到下 | 下到上*/</span><br><span class="line">flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">/*换行：不换行（默认） | 换行 | 换行并第一行在下方*/</span><br><span class="line">flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line">/*主轴方向和换行简写*/</span><br><span class="line">justify-content: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">/*主轴对齐方式：左对齐（默认） | 右对齐 | 居中对齐 | 两端对齐 | 平均分布*/</span><br><span class="line">align-items: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">/*交叉轴对齐方式：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span><br><span class="line">align-content: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">/*多主轴对齐：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 上下平均分布*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3.子元素样式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.item&#123;</span><br><span class="line">order: &lt;integer&gt;;</span><br><span class="line">/*排序：数值越小，越排前，默认为0*/</span><br><span class="line">flex-grow: &lt;number&gt;; /* default 0 */</span><br><span class="line">/*放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）*/</span><br><span class="line">flex-shrink: &lt;number&gt;; /* default 1 */</span><br><span class="line">/*缩小：默认1（如果空间不足则会缩小，值为0不缩小）*/</span><br><span class="line">flex-basis: &lt;length&gt; | auto; /* default auto */</span><br><span class="line">/*固定大小：默认为0，可以设置px值，也可以设置百分比大小*/</span><br><span class="line">flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]</span><br><span class="line">/*flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto，*/</span><br><span class="line">align-self: auto | flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">/*单独对齐方式：自动（默认） | 顶部对齐 | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="小技巧篇"><a href="#小技巧篇" class="headerlink" title="小技巧篇"></a>小技巧篇</h2><h3 id="1-自定义苹果图标"><a href="#1-自定义苹果图标" class="headerlink" title="1.自定义苹果图标"></a>1.自定义苹果图标</h3><p>在网站文件根目录放一个 apple-touch-icon.png 文件，苹果设备保存网站为书签或桌面快捷方式时，就会使用这个文件作为图标，文件尺寸建议为：180px × 180px。</p>
-<h3 id="2-自定义favicon"><a href="#2-自定义favicon" class="headerlink" title="2.自定义favicon"></a>2.自定义favicon</h3><p><code>&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; mce_href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;</code></p>
-<h3 id="3-定义浏览器点击行为"><a href="#3-定义浏览器点击行为" class="headerlink" title="3.定义浏览器点击行为"></a>3.定义浏览器点击行为</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;tel:020-10086&quot;&gt;打电话给:020-10086&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;sms:10086&quot;&gt;发短信给: 10086&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;mailto:me@22278.club&quot;&gt;发送邮件: me@22278.club&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="4-定义上传文件类型和格式"><a href="#4-定义上传文件类型和格式" class="headerlink" title="4.定义上传文件类型和格式"></a>4.定义上传文件类型和格式</h3><p><code>&lt;input type=file accept=&quot;image/*&quot;&gt;</code><br>上面的文件上传框中，accept 可以限制上传文件的类型，参数为 image/<em> 是所有图片类型，点击会弹出图库，也可以指定图片格式，参数设置成 image/png 则可以限制图片类型为png；参数如果为 video/</em> 则是选择视频的意思；accept 还可以设置多个文件格式，语法为 accept=”image/gif, image/jpeg” ；</p>
-<h3 id="5-使用box-shadow改变-挡住-表单自动填充后的黄色"><a href="#5-使用box-shadow改变-挡住-表单自动填充后的黄色" class="headerlink" title="5.使用box-shadow改变(挡住)表单自动填充后的黄色"></a>5.使用box-shadow改变(挡住)表单自动填充后的黄色</h3><p><code>input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
-box-shadow:inset 0 0 0 1000px #fff;
-}</code></p>
-<h3 id="6-用CSS实现省略号文字截断"><a href="#6-用CSS实现省略号文字截断" class="headerlink" title="6.用CSS实现省略号文字截断"></a>6.用CSS实现省略号文字截断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">white-space: nowrap;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
-<h3 id="7-使用border绘制小三角"><a href="#7-使用border绘制小三角" class="headerlink" title="7.使用border绘制小三角"></a>7.使用border绘制小三角</h3><p>原理是：上下和左右的边框对接其实是个斜角，利用这个特性，使其中一边的边框透明，另外一边写成想要的颜色并隐藏对边，就可以变成小箭头形状。</p>
-<p>border<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">border-width: 10px 10px 10px 0; //左箭头</span><br><span class="line">border-color: transparent #fff;</span><br><span class="line">border-style: solid;</span><br><span class="line">width: 0;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Tootip写法："><a href="#Tootip写法：" class="headerlink" title="Tootip写法："></a>Tootip写法：</h2><!--html-->
-<p><div class="box">嗨！点击菜单就可以关注公众号了</div><br>/<em>–css–</em>/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">position: relative;</span><br><span class="line">padding: 0 20px;</span><br><span class="line">width: 380px;</span><br><span class="line">height: 80px;</span><br><span class="line">border-radius: 8px;</span><br><span class="line">background: #efefef;</span><br><span class="line">font-size: 18px;</span><br><span class="line">line-height: 80px;</span><br><span class="line">&#125;</span><br><span class="line">.box:after&#123;</span><br><span class="line">position: absolute;</span><br><span class="line">top: 50%;</span><br><span class="line">left: -15px;</span><br><span class="line">z-index: 1;</span><br><span class="line">display: block;</span><br><span class="line">margin-top: -15px;</span><br><span class="line">width: 0;</span><br><span class="line">border-color: transparent #efefef;</span><br><span class="line">border-style: solid;</span><br><span class="line">border-width: 15px 15px 15px 0;</span><br><span class="line">content: &quot;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="http://lalala.lol/2015/10/15/development-of-resource-integration-in-mobile-terminal/" target="_blank" rel="noopener">本文转载，标明出处</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://loveki.top/2018/10/30/了解闭包/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/10/30/配置vue-devtools调试工具/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          配置vue-devtools调试工具
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/08/02/闭包/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">学习Javascript闭包（Closure）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-
-  
-
-  
-
-   
-
+            
           </div>
         </div>
       </div>
@@ -463,15 +257,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
