@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://loveki.top">
   <title>配置vue-devtools调试工具 | Kelvin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-devtools.git 2. Git 进入到 vue-devtools 所在目录，然后运行以下两个指令。先运行 npm install 安装项目依赖 再运行 npm run build 进行编译生成">
+  <meta name="description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-dev/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/闭包.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/了解闭包.md/Users/zhangwei/Desktop/Blog/">
 <meta name="keywords" content="js,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="配置vue-devtools调试工具">
 <meta property="og:url" content="http://loveki.top/2018/10/30/配置vue-devtools调试工具/index.html">
 <meta property="og:site_name" content="Kelvin">
-<meta property="og:description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-devtools.git 2. Git 进入到 vue-devtools 所在目录，然后运行以下两个指令。先运行 npm install 安装项目依赖 再运行 npm run build 进行编译生成">
+<meta property="og:description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-dev/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/闭包.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/了解闭包.md/Users/zhangwei/Desktop/Blog/">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-31T09:17:23.277Z">
+<meta property="og:updated_time" content="2018-10-31T15:36:25.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置vue-devtools调试工具">
-<meta name="twitter:description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-devtools.git 2. Git 进入到 vue-devtools 所在目录，然后运行以下两个指令。先运行 npm install 安装项目依赖 再运行 npm run build 进行编译生成">
+<meta name="twitter:description" content="1. 通过 Git 克隆项目到本地git clone https://github.com/vuejs/vue-dev/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/闭包.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/了解闭包.md/Users/zhangwei/Desktop/Blog/">
   
     <link rel="alternative" href="/atom.xml" title="Kelvin" type="application/atom+xml">
   
@@ -51,7 +51,6 @@
 			<img src="http://ww4.sinaimg.cn/mw690/c14566f7jw8emwxbzy92vj20e70e8aaj.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  
 		  <h1 class="header-author"><a href="/">张威</a></h1>
 		</hgroup>
 		
@@ -63,7 +62,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
 				<li><a href="/archives/index.html">归档</a></li>
+	        
+				<li><a href="/">简历</a></li>
 	        
 			</ul>
 		</nav>
@@ -74,6 +77,10 @@
     			
             
     			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
@@ -81,9 +88,13 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/hellobabi" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="mail" target="_blank" href="/1461598964@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -115,25 +126,37 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/hellobabi" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="mail" target="_blank" href="/1461598964@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/">简历</a></li>
 		        
 				</ul>
 			</nav>
@@ -168,7 +191,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-通过-Git-克隆项目到本地"><a href="#1-通过-Git-克隆项目到本地" class="headerlink" title="1. 通过 Git 克隆项目到本地"></a>1. 通过 Git 克隆项目到本地</h2><p><code>git clone https://github.com/vuejs/vue-devtools.git</code></p>
+        <h2 id="1-通过-Git-克隆项目到本地"><a href="#1-通过-Git-克隆项目到本地" class="headerlink" title="1. 通过 Git 克隆项目到本地"></a>1. 通过 Git 克隆项目到本地</h2><p><code>git clone https://github.com/vuejs/vue-dev/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/闭包.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/了解闭包.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/ES6.md/Users/zhangwei/Desktop/Blog/myBlog/source/_posts/this.mdtools.git</code></p>
 <h3 id="2-Git-进入到-vue-devtools-所在目录，然后运行以下两个指令。"><a href="#2-Git-进入到-vue-devtools-所在目录，然后运行以下两个指令。" class="headerlink" title="2. Git 进入到 vue-devtools 所在目录，然后运行以下两个指令。"></a>2. Git 进入到 vue-devtools 所在目录，然后运行以下两个指令。</h3><p>先运行 npm install 安装项目依赖</p>
 <p>再运行 npm run build 进行编译生成<br><a id="more"></a><br>这两条指令的运行都需要一定的时间，请耐心等待.</p>
 <h3 id="3-修改安装目录vue-devtoolsshellschrome-中-的manifest-json文件。-将-persistent-参数改为-true"><a href="#3-修改安装目录vue-devtoolsshellschrome-中-的manifest-json文件。-将-persistent-参数改为-true" class="headerlink" title="3. 修改安装目录vue-devtoolsshellschrome 中 的manifest.json文件。 将 persistent 参数改为 true"></a>3. 修改安装目录vue-devtoolsshellschrome 中 的manifest.json文件。 将 persistent 参数改为 true</h3><h3 id="4-将扩展程序添加到chrome浏览器"><a href="#4-将扩展程序添加到chrome浏览器" class="headerlink" title="4. 将扩展程序添加到chrome浏览器"></a>4. 将扩展程序添加到chrome浏览器</h3><p>a. 打开浏览器扩展程序（也可以直接在地址栏输入 chrome://extensions/ 来打开）<br>b. 打开扩展程序后，开启 开发者模式，点击 加载已解压的扩展程序 按钮<br>c. 选择 vue-devtools &gt; shells 目录下的 Chrome 文件夹</p>
@@ -310,33 +333,8 @@
 
 
 
-  <section id="comments" class="comments">
-    <style>
-      .comments{margin:30px;padding:10px;background:#fff}
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-    </style>
-    <div id="vcomment" class="comment"></div>
-<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-   new Valine({
-            av: AV,
-            el: '#vcomment',
-            notify: notify,
-            verify: verify,
-            app_id: "rnk6egkrnETATh4dFtsmTHce-gzGzoHsz",
-            app_key: "tEJwnVMgytP1PPd5oXaJ7DJy",
-            placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
-            avatar: "",
-            avatar_cdn: "",
-            pageSize: "10"
-    });
-   
-</script>
-  </section>
+
+
 
           </div>
         </div>
@@ -347,9 +345,9 @@
     	<div class="footer-left">
     		&copy; 2018 张威
     	</div>
-      	<!-- <div class="footer-right">
+      	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div> -->
+      	</div>
     </div>
   </div>
 </footer>
@@ -389,17 +387,25 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -420,6 +426,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
@@ -428,15 +442,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
             
             <div class="clearfix"></div>
@@ -482,6 +488,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
