@@ -359,14 +359,7 @@
             avatar_cdn: "",
             pageSize: "10"
     });
-    if(window.location.hash){
-        var checkExist = setInterval(function() {
-           if ($(window.location.hash).length) {
-              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
-              clearInterval(checkExist);
-           }
-        }, 100);
-    }
+   
 </script>
   </section>
 
@@ -460,19 +453,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
