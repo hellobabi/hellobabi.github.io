@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://loveki.top">
-  <title>Tag: ES6 | Kelvin</title>
+  <title>js处理异步 | Kelvin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kelvin">
-<meta property="og:url" content="http://loveki.top/tags/ES6/index.html">
+  <meta name="description" content="回调函数回调函数也是最基础最常用的处理js异步操作的办法 事件发布/订阅发布/订阅模式也是诸多设计模式当中的一种，恰好这种方式可以在es5下相当优雅地处理异步操作。什么是发布/订阅呢？以上一节的例子来说，fn1，fn2，fn3都可以视作一个事件的发布者，只要执行它，就会发布一个事件。这个时候，我们可以通过一个事件的订阅者去批量订阅并处理这些事件，包括它们的先后顺序">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js处理异步">
+<meta property="og:url" content="http://loveki.top/2018/10/14/js处理异步/index.html">
 <meta property="og:site_name" content="Kelvin">
-<meta property="og:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
+<meta property="og:description" content="回调函数回调函数也是最基础最常用的处理js异步操作的办法 事件发布/订阅发布/订阅模式也是诸多设计模式当中的一种，恰好这种方式可以在es5下相当优雅地处理异步操作。什么是发布/订阅呢？以上一节的例子来说，fn1，fn2，fn3都可以视作一个事件的发布者，只要执行它，就会发布一个事件。这个时候，我们可以通过一个事件的订阅者去批量订阅并处理这些事件，包括它们的先后顺序">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-27T16:08:16.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kelvin">
-<meta name="twitter:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
+<meta name="twitter:title" content="js处理异步">
+<meta name="twitter:description" content="回调函数回调函数也是最基础最常用的处理js异步操作的办法 事件发布/订阅发布/订阅模式也是诸多设计模式当中的一种，恰好这种方式可以在es5下相当优雅地处理异步操作。什么是发布/订阅呢？以上一节的例子来说，fn1，fn2，fn3都可以视作一个事件的发布者，只要执行它，就会发布一个事件。这个时候，我们可以通过一个事件的订阅者去批量订阅并处理这些事件，包括它们的先后顺序">
   
     <link rel="alternative" href="/atom.xml" title="Kelvin" type="application/atom+xml">
   
@@ -141,36 +143,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js处理异步" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/ES6/" class="archive-article-date">
-  	<time datetime="2018-07-30T01:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/ES6/">ES6 编码教程第一节：开发环境搭建</a>
+    <h1 class="article-title" itemprop="name">
+      js处理异步
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/14/js处理异步/" class="archive-article-date">
+  	<time datetime="2018-10-14T07:48:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>回调函数也是最基础最常用的处理js异步操作的办法</p>
+<h3 id="事件发布-订阅"><a href="#事件发布-订阅" class="headerlink" title="事件发布/订阅"></a>事件发布/订阅</h3><p>发布/订阅模式也是诸多设计模式当中的一种，恰好这种方式可以在es5下相当优雅地处理异步操作。什么是发布/订阅呢？以上一节的例子来说，fn1，fn2，fn3都可以视作一个事件的发布者，只要执行它，就会发布一个事件。这个时候，我们可以通过一个事件的订阅者去批量订阅并处理这些事件，包括它们的先后顺序<br><a id="more"></a></p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>使用Promise的方式，就不需要额外地编写一个消息订阅者函数了，只需要异步函数返回一个Promise即可</p>
+<h3 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h3><p>如果说Promise的使用能够化回调为链式，那么generator的办法则可以消灭那一大堆的Promise特征方法，比如一大堆的then()</p>
+<h3 id="优雅的async-await"><a href="#优雅的async-await" class="headerlink" title="优雅的async/await"></a>优雅的async/await</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -178,28 +203,144 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://loveki.top/2018/10/14/js处理异步/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/10/24/http协议/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          http协议
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/09/10/iframe高度自适应/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iframe高度自适应</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
+  
+
+  
+
+  
+
+  
+
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
     
-
+new Valine({
+    el: '#vcomment',
+    notify: notify,
+    verify: verify,
+    app_id: "rnk6egkrnETATh4dFtsmTHce-gzGzoHsz",
+    app_key: "tEJwnVMgytP1PPd5oXaJ7DJy",
+    placeholder: "Just go go",
+    avatar:"mm"
+});
+</script>
+    </section>
+  
 
           </div>
         </div>
@@ -221,9 +362,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

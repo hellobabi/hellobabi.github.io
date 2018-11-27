@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://loveki.top">
-  <title>Tag: ES6 | Kelvin</title>
+  <title>JS获取各种宽度、高度的简单介绍 | Kelvin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kelvin">
-<meta property="og:url" content="http://loveki.top/tags/ES6/index.html">
+  <meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS获取各种宽度、高度的简单介绍">
+<meta property="og:url" content="http://loveki.top/2018/10/27/JS获取各种宽度、高度的简单介绍/index.html">
 <meta property="og:site_name" content="Kelvin">
-<meta property="og:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://loveki.top/images/width&&height.png">
+<meta property="og:updated_time" content="2018-11-27T15:47:42.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kelvin">
-<meta name="twitter:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
+<meta name="twitter:title" content="JS获取各种宽度、高度的简单介绍">
+<meta name="twitter:image" content="http://loveki.top/images/width&&height.png">
   
     <link rel="alternative" href="/atom.xml" title="Kelvin" type="application/atom+xml">
   
@@ -141,36 +142,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS获取各种宽度、高度的简单介绍" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/ES6/" class="archive-article-date">
-  	<time datetime="2018-07-30T01:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/ES6/">ES6 编码教程第一节：开发环境搭建</a>
+    <h1 class="article-title" itemprop="name">
+      JS获取各种宽度、高度的简单介绍
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/27/JS获取各种宽度、高度的简单介绍/" class="archive-article-date">
+  	<time datetime="2018-10-27T15:28:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/width&amp;&amp;height.png" alt=" pic "><br><a id="more"></a></p>
+<h3 id="JS获取各种宽度、高度的简单介绍："><a href="#JS获取各种宽度、高度的简单介绍：" class="headerlink" title="JS获取各种宽度、高度的简单介绍："></a>JS获取各种宽度、高度的简单介绍：</h3><p>scrollHeight: 获取对象的滚动高度。<br>scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br>scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br>scrollWidth:获取对象的滚动宽度<br>offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br>offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br>offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br>event.clientX 相对文档的水平座标<br>event.clientY 相对文档的垂直座标<br>event.offsetX 相对容器的水平坐标<br>event.offsetY 相对容器的垂直坐标<br>document.documentElement.scrollTop 垂直方向滚动的值<br>event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br>以上主要指IE之中，FireFox差异如下：<br>IE6.0、FF1.06+：<br>clientWidth = width + padding<br>clientHeight = height + padding<br>offsetWidth = width + padding + border<br>offsetHeight = height + padding + border<br>IE5.0/5.5：<br>clientWidth = width - border<br>clientHeight = height - border<br>offsetWidth = width<br>offsetHeight = height<br>(需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br>offsetWidth (width+padding+border)<br>假设 obj 为某个 HTML 控件。<br>obj.offsetTop 指 obj 距离上方或上层控件的位置，整型，单位像素。<br>obj.offsetLeft 指 obj 距离左方或上层控件的位置，整型，单位像素。<br>obj.offsetWidth 指 obj 控件自身的宽度，整型，单位像素。获取对象可见内容的宽度，不包括滚动条，不包括边框；<br>obj.offsetHeight 指 obj 控件自身的高度，整型，单位像素。<br>offsetWidth 与 style.width 的区别<br>一、offsetTop 返回的是数字，而 style.top 返回的是字符串，除了数字外还带有单位：px。<br>二、offsetTop 只读，而 style.top 可读写。<br>三、如果没有给 HTML 元素指定过 top 样式，则 style.top 返回的是空字符串。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -178,28 +200,144 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://loveki.top/2018/10/27/JS获取各种宽度、高度的简单介绍/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/10/30/了解闭包/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          移动WEB前端开发资源整合
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/10/24/http协议/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">http协议</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
+  
+
+  
+
+  
+
+  
+
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
     
-
+new Valine({
+    el: '#vcomment',
+    notify: notify,
+    verify: verify,
+    app_id: "rnk6egkrnETATh4dFtsmTHce-gzGzoHsz",
+    app_key: "tEJwnVMgytP1PPd5oXaJ7DJy",
+    placeholder: "Just go go",
+    avatar:"mm"
+});
+</script>
+    </section>
+  
 
           </div>
         </div>
@@ -221,9 +359,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

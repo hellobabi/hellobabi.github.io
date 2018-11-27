@@ -6,18 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://loveki.top">
-  <title>Tag: ES6 | Kelvin</title>
+  <title>进程与线程 | Kelvin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kelvin">
-<meta property="og:url" content="http://loveki.top/tags/ES6/index.html">
+  <meta name="description" content="进程与线程的问题今天学习的内容是进程和线程，光看文字大家可能觉得会很陌生，不理解这两个词语是什么意思，尤其是线程，看起来会更为抽象，而进程可能大家会在很多地方多看得到他们存在的身影。比如说，在任务管理器中">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进程与线程">
+<meta property="og:url" content="http://loveki.top/2018/11/13/浏览器/index.html">
 <meta property="og:site_name" content="Kelvin">
-<meta property="og:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
+<meta property="og:description" content="进程与线程的问题今天学习的内容是进程和线程，光看文字大家可能觉得会很陌生，不理解这两个词语是什么意思，尤其是线程，看起来会更为抽象，而进程可能大家会在很多地方多看得到他们存在的身影。比如说，在任务管理器中">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://loveki.top/images/任务.png">
+<meta property="og:image" content="http://loveki.top/images/任务2.png">
+<meta property="og:image" content="http://loveki.top/images/任务3.png">
+<meta property="og:image" content="http://loveki.top/images/任务4.png">
+<meta property="og:image" content="http://loveki.top/images/任务5.png">
+<meta property="og:updated_time" content="2018-11-27T16:03:57.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kelvin">
-<meta name="twitter:description" content="喜欢折腾的前端开发一枚，世界在更新，技术在更新，我们自己也要不停更新，这个舞台很大，总有你闪耀的地方。">
+<meta name="twitter:title" content="进程与线程">
+<meta name="twitter:description" content="进程与线程的问题今天学习的内容是进程和线程，光看文字大家可能觉得会很陌生，不理解这两个词语是什么意思，尤其是线程，看起来会更为抽象，而进程可能大家会在很多地方多看得到他们存在的身影。比如说，在任务管理器中">
+<meta name="twitter:image" content="http://loveki.top/images/任务.png">
   
     <link rel="alternative" href="/atom.xml" title="Kelvin" type="application/atom+xml">
   
@@ -141,36 +149,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-浏览器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/ES6/" class="archive-article-date">
-  	<time datetime="2018-07-30T01:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/ES6/">ES6 编码教程第一节：开发环境搭建</a>
+    <h1 class="article-title" itemprop="name">
+      进程与线程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/11/13/浏览器/" class="archive-article-date">
+  	<time datetime="2018-11-13T06:46:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="进程与线程的问题"><a href="#进程与线程的问题" class="headerlink" title="进程与线程的问题"></a>进程与线程的问题</h2><p>今天学习的内容是进程和线程，光看文字大家可能觉得会很陌生，不理解这两个词语是什么意思，尤其是线程，看起来会更为抽象，而进程可能大家会在很多地方多看得到他们存在的身影。<br>比如说，在任务管理器中<br><img src="/images/任务.png" alt="任务"><br><a id="more"></a><br><img src="/images/任务2.png" alt="任务"><br>从上面两个图中，我们可以清楚的认识到，什么是进程，从第一张图可以看到，映像名称下每一条都是一个进程，后面是每一条进程的cpu占有率以及内存占用。</p>
+<p>进程定义：进程就是在系统内存中加载运行的程序；</p>
+<p>通俗来讲：<br>　　计算机的核心是CPU，它承担了所有的计算任务。它就像一座工厂，时刻在运行。 假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工<br>　　背后的含义就是，单个CPU一次只能运行一个任务。进程就好比工厂的车间，它代表CPU所能处理的单个任务。任一时刻，CPU总是运行一个进程，其他进程处于非运行状态。　</p>
+<h2 id="2-线程"><a href="#2-线程" class="headerlink" title="2.线程"></a>2.线程</h2><p><img src="/images/任务3.png" alt="任务">　<br>图接上文，一个车间（进程）里，可以有很多工人（线程）。他们协同完成一个任务。车间的空间是工人们共享的，比如许多房间是每个工人都可以进出的。这象征一个进程的内存空间是共享的，每个线程都可以使用这些共享内存。<br>可是，每间房间的大小不同，有些房间最多只能容纳一个人，比如厕所。里面有人的时候，其他人就不能进去了。这代表一个线程使用某些共享内存时，其他线程必须等它结束，才能使用这一块内存。一个防止他人进入的简单方法，就是门口加一把锁。先到的人锁上门，后到的人看到上锁，就在门口排队，等锁打开再进去。这就叫”互斥锁”（Mutual exclusion，缩写 Mutex），防止多个线程同时读写某一块内存区域。<br>还有些房间，可以同时容纳n个人，比如厨房。也就是说，如果人数大于n，多出来的人只能在外面等着。这好比某些内存区域，只能供给固定数目的线程使用。这时的解决方法，就是在门口挂n把钥匙。进去的人就取一把钥匙，出来时再把钥匙挂回原处。后到的人发现钥匙架空了，就知道必须在门口排队等着了。这种做法叫做”信号量”（Semaphore），用来保证多个线程不会互相冲突。不难看出，mutex是semaphore的一种特殊情况（n=1时）。也就是说，完全可以用后者替代前者。但是，因为mutex较为简单，且效率高，所以在必须保证资源独占的情况下，还是采用这种设计。<br>这样看来，线程是不是就不难以理解了，线程可以说是进程的实体化，线程之间相互配合，完成进程分配下来的任务。　<br>　　　　<br>线程是CPU调度和分派的基本单位，它是比进程更小的能独立运行的基本单位。线程自己基本上不拥有系统资源，只拥有一点在运行中必不可少的资源（如程序计数器、一组寄存器和栈），但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。<br>　　　   　　<br>这样看来，线程是不是就不难以理解了，线程可以说是进程的实体化，线程之间相互配合，完成进程分配下来的任务。　　　   　　　　<br> 线程是CPU调度和分派的基本单位，它是比进程更小的能独立运行的基本单位。线程自己基本上不拥有系统资源，只拥有一点在运行中必不可少的资源（如程序计数器、一组寄存器和栈），但是可与同属一个进程的其他的线程共享进程所拥有的全部资源。　　　　   　　　　　　</p>
+<h3 id="3-进程与线程之间的区别"><a href="#3-进程与线程之间的区别" class="headerlink" title="3.进程与线程之间的区别　"></a>3.进程与线程之间的区别　</h3><p><img src="/images/任务4.png" alt="任务">　　　　<br>除此之外，进程与线程之间的区别还有：</p>
+<p>进程是由系统创建的，并且会为它分配独立地址空间，加载（复制）所需要的存在硬盘中的数</p>
+<p>据到内存，进程创建时候会创建一个主线程；</p>
+<p>线程是进程创建的，直接能够使用进程的资源，并且同个进程中的线程共享进程的地址空间</p>
+<p>资源，因此创建进程会比创建线程要耗费资源；</p>
+<p>进程和线程都能够独立完成任务，进程完成的任务要比线程完成的任务复杂；</p>
+<p>进程控制不了兄弟进程，只能控制子进程，同个进程中的线程可以控制兄弟线程</p>
+<h3 id="4-浏览器进程"><a href="#4-浏览器进程" class="headerlink" title="4.浏览器进程"></a>4.浏览器进程</h3><p>Browser进程：浏览器的主进程（负责协调、主控），只有一个<br>第三方插件进程：每种类型的插件对应一个进程，仅当使用该插件时才创建<br>GPU进程：最多一个，用于3D绘制<br>浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优化，如多个空白tab会合并成一个进程）<br>在这几个进程中，我们主要了解浏览器渲染进程。它是对我们前端操作来说最重要的一个进程，因为里面包含了js引擎进程。这一章，我们大概了解一下渲染进程中中的这几个线程，对我们下一章了解js Event-Loop事件机制做个铺垫。　　   　　　　　　<br>浏览器渲染进程包含的几个线程：</p>
+<h4 id="GUI渲染线程"><a href="#GUI渲染线程" class="headerlink" title="GUI渲染线程"></a>GUI渲染线程</h4><p>负责渲染浏览器界面，解析HTML，CSS，构建DOM树和RenderObject树，布局和绘制等。<br>当界面需要重绘（Repaint）或由于某种操作引发回流(reflow)时，该线程就会执行<br>注意，GUI渲染线程与JS引擎线程是互斥的，当JS引擎执行时GUI线程会被挂起（相当于被冻结了），GUI更新会被保存在一个队列中等到JS引擎空闲时立即被执行。</p>
+<h4 id="JS引擎线程"><a href="#JS引擎线程" class="headerlink" title="JS引擎线程"></a>JS引擎线程</h4><p>也称为JS内核，负责处理Javascript脚本程序。（例如V8引擎）<br>JS引擎线程负责解析Javascript脚本，运行代码。<br>JS引擎一直等待着任务队列中任务的到来，然后加以处理，一个Tab页（renderer进程）中无论什么时候都只有一个JS线程在运行JS程序<br>同样注意，GUI渲染线程与JS引擎线程是互斥的，所以如果JS执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞。</p>
+<h4 id="事件触发线程"><a href="#事件触发线程" class="headerlink" title="事件触发线程"></a>事件触发线程</h4><p>归属于浏览器而不是JS引擎，用来控制事件循环（可以理解，JS引擎自己都忙不过来，需要浏览器另开线程协助）<br>当JS引擎执行代码块如setTimeOut时（也可来自浏览器内核的其他线程,如鼠标点击、AJAX异步请求等），会将对应任务添加到事件线程中<br>当对应的事件符合触发条件被触发时，该线程会把事件添加到待处理队列的队尾，等待JS引擎的处理<br>注意，由于JS的单线程关系，所以这些待处理队列中的事件都得排队等待JS引擎处理（当JS引擎空闲时才会去执行）</p>
+<h4 id="定时触发器线程"><a href="#定时触发器线程" class="headerlink" title="定时触发器线程"></a>定时触发器线程</h4><p>传说中的setInterval与setTimeout所在线程<br>浏览器定时计数器并不是由JavaScript引擎计数的,（因为JavaScript引擎是单线程的, 如果处于阻塞线程状态就会影响记计时的准确）<br>因此通过单独线程来计时并触发定时（计时完毕后，添加到事件队列中，等待JS引擎空闲后执行）<br>注意，W3C在HTML标准中规定，规定要求setTimeout中低于4ms的时间间隔算为4ms。</p>
+<h4 id="异步http请求线程"><a href="#异步http请求线程" class="headerlink" title="异步http请求线程"></a>异步http请求线程</h4><p>在XMLHttpRequest在连接后是通过浏览器新开一个线程请求<br>将检测到状态变更时，如果设置有回调函数，异步线程就产生状态变更事件，将这个回调再放入事件队列中。再由JavaScript引擎执行。<br><img src="/images/任务5.png" alt="任务">　　<br>在这里，我们其实可以找到一个问题，为什JavaScript是单线程而不是多线程语言，单线程同一个时间只能做一件事。如果JavaScript是多线程，不是可以提高效率吗。</p>
+<p>其实，js单线程是被开发时就决定的，js一开始是作为一门辅助语言存在的，它的主要作用就是与用户互动，减少客户端向服务器的请求次数，设想一下，如果有一个简单的表单有效性验证，用户填完一个表单，点击提交按钮，客户端向服务器发送请求，等待了 30 秒的处理后，看到的却是一条告诉你忘记填写密码的提示，这样不是大大的浪费了服务器性能，也降低了用户体验吗。所以它存在的用途就决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？<br>　　<br>所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。<br>　　<br>为了利用多核CPU的计算能力，HTML5提出Web Worker标准，允许JavaScript脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM。所以，这个新标准并没有改变JavaScript单线程的本质。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -178,28 +223,144 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://loveki.top/2018/11/13/浏览器/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/11/18/简历/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          简历
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/10/30/配置vue-devtools调试工具/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">配置vue-devtools调试工具</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
+  
+
+  
+
+  
+
+  
+
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
     
-
+new Valine({
+    el: '#vcomment',
+    notify: notify,
+    verify: verify,
+    app_id: "rnk6egkrnETATh4dFtsmTHce-gzGzoHsz",
+    app_key: "tEJwnVMgytP1PPd5oXaJ7DJy",
+    placeholder: "Just go go",
+    avatar:"mm"
+});
+</script>
+    </section>
+  
 
           </div>
         </div>
@@ -221,9 +382,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
